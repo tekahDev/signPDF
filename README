@@ -1,0 +1,17 @@
+Copy the folder to your home directory. Alternatively, change the file path in signPDF.sh
+
+Usage: ./signPDF -a file to sign -b scaling -c position -d signature file -e page to sign
+a-  /path/to/file/to/sign
+b - scaling for signature file (textwidth)
+c - absolute position for signature x,y (e.g. 14cm,8cm)
+d - /path/to/signature/file
+e - page to sign (only 1 possible)
+f - path to output file (optional, if not given output is ~/signPDF/signed.pdf)
+
+required packages: pdftk, texlive
+
+example:
+   ./signPDF.sh -a /home/user/Downloads/file_to_sign.pdf -b 0.4 -c 9cm,24.5cm -d /home/user/pictures/signature_file.png -e 1
+
+add an alias to run the command from everywhere
+	alias="home/{{user}}/signPDF/signPDF.sh"
